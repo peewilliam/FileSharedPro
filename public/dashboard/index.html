@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FileShare Pro - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-brand">
+                <i class="bi bi-share-fill"></i>
+                <span>FileShare Pro</span>
+            </div>
+
+            <div class="sidebar-menu">
+                <div class="menu-header">Menu</div>
+                <ul class="menu-items">
+                    <li class="active">
+                        <a href="#" data-section="overview">
+                            <i class="bi bi-grid-1x2"></i>
+                            <span>Visão Geral</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-section="files">
+                            <i class="bi bi-folder"></i>
+                            <span>Meus Arquivos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-section="shared">
+                            <i class="bi bi-share"></i>
+                            <span>Compartilhados</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-section="recent">
+                            <i class="bi bi-clock-history"></i>
+                            <span>Recentes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-section="favorites">
+                            <i class="bi bi-star"></i>
+                            <span>Favoritos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-section="trash">
+                            <i class="bi bi-trash"></i>
+                            <span>Lixeira</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="menu-header">Plano</div>
+                <div class="storage-widget">
+                    <div class="storage-info">
+                        <div class="storage-text">
+                            <span>Armazenamento</span>
+                            <span>2.4 GB / 5 GB</span>
+                        </div>
+                        <div class="storage-progress">
+                            <div class="progress-bar" style="width: 48%"></div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-outline-primary btn-sm w-100 mt-2">
+                        Upgrade para Pro
+                    </a>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="dropdown">
+                    <button class="user-menu" data-bs-toggle="dropdown">
+                        <div class="user-avatar">JS</div>
+                        <div class="user-info">
+                            <span class="user-name">John Smith</span>
+                            <span class="user-email">john@example.com</span>
+                        </div>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i> Perfil</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-gear"></i> Configurações</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-box-arrow-right"></i> Sair</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="content-header">
+                <div class="header-left">
+                    <button class="menu-toggle">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <div class="search-box">
+                        <i class="bi bi-search"></i>
+                        <input type="text" placeholder="Buscar arquivos...">
+                    </div>
+                </div>
+                <div class="header-right">
+                    <button class="action-button" data-bs-toggle="modal" data-bs-target="#uploadModal">
+                        <i class="bi bi-cloud-upload"></i>
+                        <span>Upload</span>
+                    </button>
+                    <button class="icon-button" title="Notificações">
+                        <i class="bi bi-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="content-wrapper">
+                <div class="content-container" id="mainContent">
+                    <!-- Content will be loaded here -->
+                </div>
+            </div>
+            
+        </main>
+    </div>
+
+    <!-- Upload Modal -->
+    <div class="modal fade" id="uploadModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title">Upload de Arquivo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="upload-zone" id="dropZone">
+                        <input type="file" id="fileInput" multiple hidden>
+                        <div class="upload-content">
+                            <div class="upload-icon">
+                                <i class="bi bi-cloud-arrow-up"></i>
+                            </div>
+                            <h6>Arraste seus arquivos aqui</h6>
+                            <p>ou <a href="#" id="browseFiles">selecione do computador</a></p>
+                            <span class="upload-info">Arquivos até 100MB (Plano Gratuito)</span>
+                        </div>
+                    </div>
+                    <div class="upload-progress d-none">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar"></div>
+                        </div>
+                        <div class="upload-status">
+                            <span class="filename">arquivo.pdf</span>
+                            <span class="status">50% concluído</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../js/dashboard/main.js"></script>
+</body>
+</html>

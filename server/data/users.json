@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1735420326252",
+    "email": "test@example.com",
+    "password": "e24681616c891813429f0008cced613d:d376001773843ee11cc6198e23b1b9e687751bab1d5447ba730b23905cb5d1bcee85e5ed0ccb7c38745b59271bb5146eefe3fcc8c88f7e71e4a241c6e7bbeeb0",
+    "name": "Test User",
+    "createdAt": "2024-12-28T21:12:06.238Z"
+  },
+  {
+    "id": "1735420687455",
+    "email": "petrycksilva@gmail.com",
+    "password": "95c27fe58a22662c067c9b3d8cdebb6c:1c5201307b4d7d48f573854924320014ad54b3ddf77d5c69704b3ce78a1fa477204185fe6e7edb25107bd8dbff5a5b6b1970d35ba012952d57e12fe2a94a3860",
+    "name": "petrycksilva",
+    "createdAt": "2024-12-28T21:18:07.441Z"
+  },
+  {
+    "id": "1735423016405",
+    "email": "marcos@i9devgroup.com",
+    "password": "54b47b73c0ab01f3551392eddc83b4a2:8040ac8c955a698afb5a47779fd3875b122661ff537ea6296860c239f26122a3dfbedca6b8ee157ad68ee360e8f94816f3fd63f0f35f09a1456310dc64b3e8d1",
+    "name": "marcos",
+    "createdAt": "2024-12-28T21:56:56.404Z"
+  }
+]

@@ -1,0 +1,35 @@
+/* Estilos dos Botões */
+.btn {
+    transition: all 0.2s ease;
+    padding: 0.6rem 1.5rem;
+}
+
+.btn-primary {
+    background: var(--gradient-primary);
+    border: none;
+    box-shadow: 0 4px 12px rgba(var(--bs-primary-rgb), 0.15);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(var(--bs-primary-rgb), 0.25);
+}
+
+.btn-light {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+}
+
+.btn-light:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline-primary {
+    border: 2px solid var(--bs-primary);
+}
+
+.btn-lg {
+    padding: 1rem 2rem;
+}

@@ -1,0 +1,17 @@
+/* Estilos dos cards de preço */
+.pricing-card {
+    background: var(--surface-color);
+    border: none;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.pricing-card.featured {
+    background: var(--primary-gradient);
+    color: white;
+    transform: scale(1.05);
+}
+
+.pricing-features {
+    margin: 2rem 0;
+}

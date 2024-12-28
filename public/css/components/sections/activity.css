@@ -1,0 +1,39 @@
+.activity-timeline {
+    padding: 1rem;
+}
+
+.activity-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    border-left: 2px solid var(--border-color);
+    margin-left: 1rem;
+    position: relative;
+}
+
+.activity-item:last-child {
+    border-left: none;
+}
+
+.activity-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--primary-light);
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -2.5rem;
+    border: 2px solid white;
+}
+
+.activity-content {
+    flex: 1;
+}
+
+.activity-item:hover {
+    background: var(--bg-light);
+    border-radius: 0.5rem;
+}

@@ -1,0 +1,49 @@
+/* Importação dos componentes */
+@import 'components/navbar.css';
+@import 'components/buttons.css';
+@import 'components/cards.css';
+@import 'components/modals.css';
+@import 'components/toast.css';
+
+/* Variáveis globais */
+:root {
+    --bs-primary: #4f46e5;
+    --bs-primary-rgb: 79, 70, 229;
+    --gradient-primary: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+}
+
+/* Estilos base */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Utilidades */
+.py-7 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.bg-gradient-primary {
+    background: var(--gradient-primary);
+}
+
+.text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Melhorias gerais */
+.display-4, .display-5, .display-6 {
+    letter-spacing: -0.02em;
+}
+
+.lead {
+    font-weight: 400;
+}
+
+.section-title {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
